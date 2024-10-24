@@ -12,7 +12,7 @@ const courses = [
         "lectures": "14+",
         "status": "stat",
         "description": "Introduction to Qualitative Chemistry.",
-        "image": "/images/chapter02.png",
+        "image": "https://www.reagent.co.uk/wp-content/uploads/chem/ca/chemicals-used-in-a-colour-change-test-scaled-1.jpg",
         "bgColor": "bg-green-100"
     },
     {
@@ -23,7 +23,7 @@ const courses = [
         "lectures": "16+",
         "status": "ongoing",
         "description": "Periodic Properties and Chemical Bonding.",
-        "image": "/images/chapter03.png",
+        "image": "https://png.pngtree.com/background/20230618/original/pngtree-visualizing-basic-chemical-bonds-within-cells-and-molecules-3d-render-of-picture-image_3710902.jpg",
         "bgColor": "bg-blue-100"
     },
     {
@@ -34,7 +34,7 @@ const courses = [
         "lectures": "14+",
         "status": "upcoming",
         "description": "Chemical Changes and Reactions.",
-        "image": "/images/chapter04.png",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQY1vIEFf3jqAQh8d7l5xVzmGcWLPH8Li2mnQ&s",
         "bgColor": "bg-yellow-100"
     },
     {
@@ -45,7 +45,7 @@ const courses = [
         "lectures": "14+",
         "status": "stat",
         "description": "Safe Use in Laboratory and Qualitative Chemistry.",
-        "image": "/images/chapter01-02.png",
+        "image": "https://btsoft.com/wp-content/uploads/2023/12/20231212_BTS_ModernLaboratory_SupportImage.png",
         "bgColor": "bg-red-100"
     },
     {
@@ -56,7 +56,7 @@ const courses = [
         "lectures": "14+",
         "status": "stat",
         "description": "Understanding Environmental Chemistry.",
-        "image": "/images/chapter01_2ndPaper.png",
+        "image": "https://www.reagent.co.uk/wp-content/uploads/2022/07/sustainable-chemistry-scaled-1.webp",
         "bgColor": "bg-pink-100"
     },
     {
@@ -67,7 +67,7 @@ const courses = [
         "lectures": "12+",
         "status": "upcoming",
         "description": "Quantitative Analysis in Chemistry.",
-        "image": "/images/chapter03_2ndPaper.png",
+        "image": "https://www.reagent.co.uk/wp-content/uploads/scie/ti/scientist-working-in-a-lab-scaled-1.webp",
         "bgColor": "bg-purple-100"
     },
     {
@@ -78,7 +78,7 @@ const courses = [
         "lectures": "12+",
         "status": "stat",
         "description": "Exploring Electrochemistry and Economic Chemistry.",
-        "image": "/images/chapter04-05_2ndPaper.png",
+        "image": "https://gaskatel.de/wp-content/uploads/Gaskatel-Halfcell-Danielelement-1024x621.png",
         "bgColor": "bg-indigo-100"
     },
     {
@@ -89,7 +89,7 @@ const courses = [
         "lectures": "14+",
         "status": "ongoing",
         "description": "In-depth study of Organic Chemistry.",
-        "image": "/images/chapter02_2ndPaper.png",
+        "image": "https://www.chemicals.co.uk/wp-content/uploads/2021/09/chalkboard-sign-saying-organic-chemistry-scaled-e1654607124262.jpg",
         "bgColor": "bg-teal-100"
     }
 ];
