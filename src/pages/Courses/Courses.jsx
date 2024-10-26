@@ -86,7 +86,7 @@ const courses = [
         "title": "Chemistry 2nd Paper - Chapter 02",
         "fee": "2500 BDT",
         "duration": "2 months +",
-        "lectures": "14+",
+        "lectures": "24+",
         "status": "ongoing",
         "description": "In-depth study of Organic Chemistry.",
         "image": "https://www.chemicals.co.uk/wp-content/uploads/2021/09/chalkboard-sign-saying-organic-chemistry-scaled-e1654607124262.jpg",
@@ -98,25 +98,42 @@ const courses = [
 const CourseCard = ({ course }) => {
     return (
         <motion.div
-            className={`course-card ${course.bgColor} rounded-lg shadow-lg p-4 m-2 flex flex-col h-72 justify-between`}
+            className={`relative ${course.bgColor} p-4 m-2 w-full md:w-1/3 lg:w-1/4 rounded-lg shadow-md transition-shadow hover:shadow-xl flex flex-col h-[22rem] justify-between overflow-hidden`}
             whileHover={{ scale: 1.05 }}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5 }}
         >
-            <img src={course.image} alt={course.title} className="w-full h-32 object-cover rounded-t-lg" />
-            <h3 className="text-xl font-bold">{course.title}</h3>
-            <p className="text-gray-600">{course.description}</p>
-            <div className="flex justify-between mt-2">
-                <p className="text-sm flex items-center">
-                    <FaDollarSign className="mr-1" /> {course.fee}
-                </p>
-                <p className="text-sm flex items-center">
-                    <FaClock className="mr-1" /> {course.duration}
-                </p>
+            {/* Card Image */}
+            <div className="relative h-36 w-full overflow-hidden rounded-lg">
+                <img
+                    src={course.image}
+                    alt={course.title}
+                    className="w-full h-full object-cover rounded-lg transform transition-transform duration-300 hover:scale-105"
+                />
             </div>
-            <p className="text-sm">Lectures: {course.lectures}</p>
-            <FaFlask className="text-2xl text-blue-500 mt-2" />
+
+            {/* Course Info */}
+            <div className="p-4 flex-grow flex flex-col justify-between">
+                <h3 className="text-xl font-bold text-gray-800">{course.title}</h3>
+                <p className="text-gray-600 my-2 line-clamp-3">{course.description}</p>
+
+                <div className="flex items-center justify-between mt-2">
+                    <p className="text-sm flex items-center text-gray-800">
+                        <FaDollarSign className="mr-1 text-green-600" /> {course.fee}
+                    </p>
+                    <p className="text-sm flex items-center text-gray-800">
+                        <FaClock className="mr-1 text-blue-600" /> {course.duration}
+                    </p>
+                </div>
+
+                <p className="text-sm text-gray-700 mt-1">Lectures: {course.lectures}</p>
+            </div>
+
+            {/* Flask Icon */}
+            <div className="absolute top-4 right-4 bg-white p-2 rounded-full shadow-md">
+                <FaFlask className="text-2xl text-blue-500" />
+            </div>
         </motion.div>
     );
 };
@@ -140,25 +157,25 @@ CourseCard.propTypes = {
 const CourseList = ({ courses }) => {
     const ongoingCourses = courses.filter(course => course.status === "ongoing");
     const upcomingCourses = courses.filter(course => course.status === "upcoming");
-    const allCourses = courses; // Show all courses
+    const allCourses = courses;
 
     return (
         <div className="course-list p-4">
-            <h2 className="text-2xl font-bold mb-4">Ongoing Courses</h2>
+            <h2 className="text-2xl font-bold mb-4 text-gray-800">Ongoing Courses</h2>
             <div className="flex flex-wrap">
                 {ongoingCourses.map(course => (
                     <CourseCard key={course.id} course={course} />
                 ))}
             </div>
 
-            <h2 className="text-2xl font-bold mb-4">Upcoming Courses</h2>
+            <h2 className="text-2xl font-bold mt-8 mb-4 text-gray-800">Upcoming Courses</h2>
             <div className="flex flex-wrap">
                 {upcomingCourses.map(course => (
                     <CourseCard key={course.id} course={course} />
                 ))}
             </div>
 
-            <h2 className="text-2xl font-bold mb-4">All Courses</h2>
+            <h2 className="text-2xl font-bold mt-8 mb-4 text-gray-800">All Courses</h2>
             <div className="flex flex-wrap">
                 {allCourses.map(course => (
                     <CourseCard key={course.id} course={course} />
@@ -189,7 +206,7 @@ CourseList.propTypes = {
 const Courses = () => {
     return (
         <div>
-            <h1 className="text-5xl font-bold font-serif text-center pt-24 pb-10 ">Courses</h1>
+            <h1 className="text-5xl font-bold font-serif text-center pt-24 pb-10 text-gray-900">Courses</h1>
             <CourseList courses={courses} />
         </div>
     );
