@@ -1,4 +1,4 @@
-import { FaPhoneAlt, FaEnvelope, FaWhatsapp, FaTelegramPlane, FaLocationArrow } from 'react-icons/fa';
+import { FaPhoneAlt, FaEnvelope, FaWhatsapp, FaTelegramPlane, FaLocationArrow, FaHubspot } from 'react-icons/fa';
 import { FaMapLocation } from 'react-icons/fa6';
 import { Link } from 'react-router-dom';
 
@@ -7,10 +7,12 @@ const Footer = () => {
         <>
             <footer className="footer bg-gray-200 text-gray-800 px-10 pt-10 flex flex-col justify-around md:flex-row">
                 <aside className="flex flex-col items-start">
-                    <div className="flex flex-col items-center gap-2">
-                        <img className='w-12' src="/logo.png" alt="Chemistry Not Chemistry Logo" />
-                        <a className="text-2xl font-cursive text-blue-600">Chemistry <strike className="text-red-500">Chemistry</strike></a>
-                    </div>
+                    <Link to={'/'}>
+                        <div className="flex flex-col items-center gap-2">
+                            <img className='w-12' src="/logo.png" alt="Chemistry Not Chemistry Logo" />
+                            <p className="text-2xl font-cursive text-blue-600">Chemistry <strike className="text-red-500">Chemistry</strike></p>
+                        </div>
+                    </Link>
                     <p>HSC Academic and Admission Preparation</p>
                     <div className="mt-4 md:mt-2 md:ml-10">
                         <div className="flex space-x-4 text-2xl">
@@ -25,6 +27,9 @@ const Footer = () => {
                             </a>
                             <a href="mailto:soyebarafat0122@gmail.com" className="link link-hover flex items-center">
                                 <FaEnvelope className="mr-1" />
+                            </a>
+                            <a href="https://arafat0122.netlify.app/" target='_blank' className="link link-hover flex items-center">
+                                <FaHubspot className="mr-1 text-blue-400" />
                             </a>
                         </div>
                     </div>
@@ -42,10 +47,10 @@ const Footer = () => {
                     </a>
                     <p className="flex items-center">
                         <FaLocationArrow className="mr-2 text-red-500" />
-                        Behind Rangpur Government Girls High School, Rangpur
+                        Near Vumi Office Mor, Raadhabollov, Rangpur
                     </p>
                     <p>
-                        <a href="https://maps.app.goo.gl/f5xTQELUzYoNeGYh6" target="_blank" rel="noopener noreferrer" className="link link-hover flex items-center">
+                        <a href="https://maps.app.goo.gl/N66ETfTuWW9LPGpc8" target="_blank" rel="noopener noreferrer" className="link link-hover flex items-center">
                             <FaMapLocation className="mr-2 text-blue-500" />
                             View on Google Maps
                         </a>

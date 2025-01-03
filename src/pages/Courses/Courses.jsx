@@ -5,6 +5,17 @@ import { motion } from 'framer-motion';
 // Course data
 const courses = [
     {
+        "id": 9,
+        "title": "HSC-25 Chemistry Saviour Batch",
+        "fee": "2500 + 2500 BDT",
+        "duration": "4 months +",
+        "lectures": "50+",
+        "status": "ongoing",
+        "description": "A dedicated program designed for students who feel left behind in Chemistry. Join us to acquire better results and build your confidence in the subject.",
+        "image": "https://static1.squarespace.com/static/5df1487b820f5e45bef493b9/t/5df4bfab3b2bfa139fe3a951/1726311499142/",
+        "bgColor": "bg-blue-200"
+    },
+    {
         "id": 1,
         "title": "Chemistry 1st Paper - Chapter 02",
         "fee": "1200 BDT",
@@ -206,7 +217,7 @@ CourseList.propTypes = {
 const Courses = () => {
     return (
         <div>
-            <h1 className="text-5xl font-bold font-serif text-center pt-24 pb-10 text-gray-900">Courses</h1>
+            <h1 className="text-5xl font-extrabold font-serif text-center pt-36 lg:pt-24 pb-10 text-gray-700">Courses</h1>
             <CourseList courses={courses} />
         </div>
     );

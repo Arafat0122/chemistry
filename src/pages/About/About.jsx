@@ -3,7 +3,7 @@ import { FaGraduationCap, FaChalkboardTeacher, FaUsers } from 'react-icons/fa';
 
 const About = () => {
     return (
-        <div className="pt-20 px-6 pb-10">
+        <div className="pt-36 lg:pt-24 px-6 pb-10">
             {/* Header Section */}
             <motion.h1
                 className="text-5xl font-bold text-center my-10 font-playfair"
@@ -24,7 +24,7 @@ const About = () => {
                 <img
                     src="/Arafat0122.jpg"
                     alt="Profile"
-                    className="w-56 h-56 rounded-full border-4 border-blue-600 shadow-lg"
+                    className="w-60 h-60 rounded-full border-4 border-blue-600 shadow-lg"
                 />
             </motion.div>
 
@@ -36,7 +36,7 @@ const About = () => {
                 transition={{ duration: 0.5, delay: 0.4 }}
             >
                 <p>
-                    Hi! My name is Soyeb Ahmed Arafat. I am a dedicated chemistry teacher with over 4 years of experience. I specialize in helping students who find the subject challenging. My teaching approach is tailored to meet the individual needs of each student, ensuring they gain a solid understanding of chemistry concepts.
+                    Hi! My name is Soyeb Ahmed Arafat. I am a dedicated chemistry teacher with over 5 years of experience. I specialize in helping students who find the subject challenging. My teaching approach is tailored to meet the individual needs of each student, ensuring they gain a solid understanding of chemistry concepts.
                 </p>
             </motion.div>
 
