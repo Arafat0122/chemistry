@@ -11,7 +11,7 @@ const HeroSection = () => {
         <section className="relative h-screen flex items-center justify-center overflow-hidden pt-24 pb-12">
             {/* Background Image */}
             <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: 'url(https://images.squarespace-cdn.com/content/v1/60f5f58041138547f1064692/e0040e77-bc15-4b08-b7eb-ec3ed627de98/klinrisk-bg-4.jpg)' }}>
-                <div className="bg-black opacity-50 lg:opacity-70 w-full h-full"></div>
+                <div className="bg-black opacity-30 lg:opacity-40 w-full h-full"></div>
             </div>
 
             {/* Content Overlay */}
