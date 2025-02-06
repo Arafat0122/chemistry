@@ -16,14 +16,14 @@ const OnGoing = () => {
     }, []);
 
     return (
-        <div className="min-h-screen bg-gray-100 py-16 px-6">
-            <h1 className="text-5xl font-playfair font-extrabold text-center text-gray-800 mb-12">Ongoing Courses</h1>
+        <div className="py-16 px-6">
+            <h1 className="text-5xl font-audiowide font-extrabold text-center text-gray-800 mb-12">Ongoing Courses</h1>
             <div className="container mx-auto flex gap-6 flex-col lg:flex-row justify-center items-center">
                 {ongoingCourses.length > 0 ? (
                     ongoingCourses.map(course => (
                         <motion.div
                             key={course.id}
-                            className={`relative md:w-96 ${course.bgColor} p-6 border rounded-lg shadow-lg hover:shadow-xl transition-shadow flex flex-col h-[24rem] justify-center overflow-hidden`}
+                            className={`relative md:w-96 bg-${course.bgColor} p-6 border rounded-lg shadow-lg hover:shadow-xl transition-shadow flex flex-col h-[24rem] justify-center overflow-hidden`}
                             whileHover={{ scale: 1.05 }}
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
@@ -37,9 +37,9 @@ const OnGoing = () => {
                                 />
                             </div>
                             <div className="p-4 flex-grow flex flex-col justify-between">
-                                <h3 className="text-lg font-bold text-gray-900">{course.title}</h3>
-                                <p className="text-gray-700 my-2 line-clamp-3">{course.description}</p>
-                                <div className="md:flex items-center justify-between mt-2">
+                                <h3 className="text-lg font-bold text-gray-900 font-playfair">{course.title}</h3>
+                                <p className="text-gray-700 my-2 line-clamp-3 font-merriweather">{course.description}</p>
+                                <div className="md:flex items-center justify-between mt-2 font-roboto">
                                     <p className="flex items-center text-green-800 font-bold mt-2">
                                         <FaDollarSign className="mr-1 text-green-600" />
                                         <span>{course.fee}</span>
@@ -49,7 +49,7 @@ const OnGoing = () => {
                                         <span>{course.duration}</span>
                                     </p>
                                 </div>
-                                <p className="flex items-center text-gray-800 mt-2 font-bold">
+                                <p className="flex items-center text-gray-800 mt-2 font-bold font-roboto">
                                     <FaClock className="mr-1 text-blue-600" />
                                     <span>Lectures: {course.lectures}</span>
                                 </p>

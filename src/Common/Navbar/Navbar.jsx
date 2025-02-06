@@ -3,12 +3,12 @@ import { NavLink } from 'react-router-dom';
 
 const Navbar = () => {
     return (
-        <div className='bg-gray-200 bg-opacity-60 text-gray-800 fixed top-0 left-0 w-full z-50'>
+        <div className='bg-gray-200 bg-opacity-60 text-gray-800 font-audiowide lg:fixed top-0 left-0 w-full z-50'>
             <div className="p-2 md:navbar">
                 <NavLink to={'/'} className="navbar-start">
                     <div className='flex items-center gap-2'>
-                        <img className='w-12' src="/logo.png" alt="Chemistry Not Chemistry Logo" />
-                        <p className="text-[22px] md:text-2xl font-cursive text-blue-600">Chemistry <strike className="text-red-500">Chemistry</strike></p>
+                        <img className='w-20' src="/logo.png" alt="Chemistry Not Chemistry Logo" />
+                        <p className="text-[30px] md:text-3xl font-audiowide text-blue-600">Chemistry <strike className="text-red-500">Chemistry</strike></p>
                     </div>
                 </NavLink>
                 <div className="navbar-end hidden lg:flex font-semibold text-gray-700">

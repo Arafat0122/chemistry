@@ -5,9 +5,10 @@ import { motion } from 'framer-motion';
 
 // Course Card component
 const CourseCard = ({ course }) => {
+    console.log(course.bgColor)
     return (
         <motion.div
-            className={`relative ${course.bgColor} p-4 m-2 w-full md:w-1/3 lg:w-1/4 rounded-lg shadow-md transition-shadow hover:shadow-xl flex flex-col h-[22rem] justify-between overflow-hidden`}
+            className={`relative bg-${course.bgColor} p-4 m-2 w-full md:w-1/3 lg:w-1/4 rounded-lg shadow-md transition-shadow hover:shadow-xl flex flex-col h-[22rem] justify-between overflow-hidden`}
             whileHover={{ scale: 1.05 }}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -24,10 +25,10 @@ const CourseCard = ({ course }) => {
 
             {/* Course Info */}
             <div className="p-4 flex-grow flex flex-col justify-between">
-                <h3 className="text-xl font-bold text-gray-800">{course.title}</h3>
-                <p className="text-gray-600 my-2 line-clamp-3">{course.description}</p>
+                <h3 className="text-xl font-bold text-gray-800 font-playfair">{course.title}</h3>
+                <p className="text-gray-600 my-2 line-clamp-3 font-merriweather">{course.description}</p>
 
-                <div className="flex items-center justify-between mt-2">
+                <div className="flex items-center justify-between mt-2 font-roboto">
                     <p className="text-sm flex items-center text-gray-800">
                         <FaDollarSign className="mr-1 text-green-600" /> {course.fee}
                     </p>
@@ -36,7 +37,7 @@ const CourseCard = ({ course }) => {
                     </p>
                 </div>
 
-                <p className="text-sm text-gray-700 mt-1">Lectures: {course.lectures}</p>
+                <p className="text-sm text-gray-700 mt-1 font-roboto">Lectures: {course.lectures}</p>
             </div>
 
             {/* Flask Icon */}
@@ -70,21 +71,21 @@ const CourseList = ({ courses }) => {
 
     return (
         <div className="course-list p-4">
-            <h2 className="text-2xl font-bold mb-4 text-gray-800">Ongoing Courses</h2>
+            <h2 className="text-3xl font-bold mb-4 text-slate-700 font-audiowide">Ongoing Courses</h2>
             <div className="flex flex-wrap">
                 {ongoingCourses.map(course => (
                     <CourseCard key={course.id} course={course} />
                 ))}
             </div>
 
-            <h2 className="text-2xl font-bold mt-8 mb-4 text-gray-800">Upcoming Courses</h2>
+            <h2 className="text-3xl font-bold mt-8 mb-4 text-slate-700 font-audiowide">Upcoming Courses</h2>
             <div className="flex flex-wrap">
                 {upcomingCourses.map(course => (
                     <CourseCard key={course.id} course={course} />
                 ))}
             </div>
 
-            <h2 className="text-2xl font-bold mt-8 mb-4 text-gray-800">All Courses</h2>
+            <h2 className="text-3xl font-bold mt-8 mb-4 text-slate-700 font-audiowide">All Courses</h2>
             <div className="flex flex-wrap">
                 {allCourses.map(course => (
                     <CourseCard key={course.id} course={course} />
@@ -145,7 +146,7 @@ const Courses = () => {
 
     return (
         <div>
-            <h1 className="text-5xl font-extrabold font-serif text-center pt-36 lg:pt-24 pb-10 text-gray-700">Courses</h1>
+            <h1 className="text-5xl font-extrabold font-audiowide text-center pt-6 lg:pt-32 pb-10 text-blue-700">Courses</h1>
             <CourseList courses={courses} />
         </div>
     );

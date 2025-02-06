@@ -3,7 +3,7 @@ import { FaGraduationCap, FaChalkboardTeacher, FaUsers } from 'react-icons/fa';
 
 const About = () => {
     return (
-        <div className="pt-36 lg:pt-24 px-6 pb-10">
+        <div className="pt-6 lg:pt-24 px-6 pb-10">
             {/* Header Section */}
             <motion.h1
                 className="text-5xl font-bold text-center my-10 font-playfair"
