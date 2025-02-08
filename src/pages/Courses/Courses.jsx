@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 
 // Course Card component
 const CourseCard = ({ course }) => {
-    console.log(course.bgColor)
+
     return (
         <motion.div
             className={`relative bg-${course.bgColor} p-4 m-2 w-full md:w-1/3 lg:w-1/4 rounded-lg shadow-md transition-shadow hover:shadow-xl flex flex-col h-[22rem] justify-between overflow-hidden`}
